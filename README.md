@@ -28,7 +28,7 @@ $ gem install omniauth-drip
 
 ```ruby
 use OmniAuth::Builder do
-  provider :buffer, ENV['DRIP_KEY'], ENV['DRIP_SECRET']
+  provider :drip, ENV['DRIP_KEY'], ENV['DRIP_SECRET']
 end
 ```
 
@@ -36,7 +36,7 @@ end
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :buffer, ENV['DRIP_KEY'], ENV['DRIP_SECRET']
+  provider :drip, ENV['DRIP_KEY'], ENV['DRIP_SECRET']
 end
 ```
 
