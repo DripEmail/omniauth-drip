@@ -17,7 +17,7 @@ module OmniAuth
         :token_url => 'https://www.getdrip.com/oauth/token'
       }
 
-      uid { access_token.client.id }
+      uid { raw_info['accounts'][0]['id'] }
 
       info do
         {
@@ -37,6 +37,10 @@ module OmniAuth
 
       def raw_info
         @raw_info ||= JSON.parse(access_token.get("/v2/accounts").body)
+      end
+
+      def callback_url
+        options[:redirect_uri] || (full_host + script_name + callback_path)
       end
     end
   end

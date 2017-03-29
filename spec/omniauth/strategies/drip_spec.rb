@@ -26,4 +26,13 @@ describe OmniAuth::Strategies::Drip do
     end
   end
 
+  context 'uid' do
+    before :each do
+      subject.stub(:raw_info) { { 'accounts' => [{ 'id' => '123' }] } }
+    end
+
+    it 'returns the id from raw_info' do
+      subject.uid.should eq('123')
+    end
+  end
 end
