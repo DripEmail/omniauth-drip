@@ -17,7 +17,7 @@ module OmniAuth
         :token_url => 'https://www.getdrip.com/oauth/token'
       }
 
-      uid { access_token.client.id }
+      uid { raw_info['accounts'][0]['id'] }
 
       info do
         {
