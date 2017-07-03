@@ -1,9 +1,8 @@
-require 'omniauth-oauth2'
+require "omniauth/strategies/oauth2"
 
 module OmniAuth
   module Strategies
     class Drip < OmniAuth::Strategies::OAuth2
-
       option :name, 'drip'
 
       option :access_token_options, {
@@ -37,6 +36,10 @@ module OmniAuth
 
       def raw_info
         @raw_info ||= JSON.parse(access_token.get("/v2/accounts").body)
+      end
+
+      def callback_url
+        full_host + script_name + callback_path
       end
     end
   end
