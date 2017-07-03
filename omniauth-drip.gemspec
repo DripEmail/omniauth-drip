@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/omniauth-drip/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+require "omniauth/drip/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Drip Inc."]
