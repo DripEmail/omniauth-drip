@@ -40,6 +40,14 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+## Testing
+
+Use the following command to run the test suite:
+
+```bash
+bundle exec rspec
+```
+
 ## Contributing
 
 1. Fork it

@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "omniauth/drip/version"
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Drip Inc."]
+  gem.authors       = ["The Drip Team"]
   gem.email         = ["support@getdrip.com"]
   gem.description   = "Provides an OmniAuth strategy for Drip to make authentication with the Drip API simple"
   gem.summary       = "An OmniAuth strategy for Drip"
@@ -18,7 +18,8 @@ Gem::Specification.new do |gem|
   gem.version       = Omniauth::Drip::VERSION
 
   gem.add_dependency 'omniauth-oauth2', '~> 1.2'
-  gem.add_development_dependency "rspec", "~> 2.7"
+  gem.add_development_dependency 'rspec', '~> 2.7'
+  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rack-test'
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'webmock'

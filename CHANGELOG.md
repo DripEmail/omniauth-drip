@@ -1,4 +1,8 @@
-# News
+# Changelog
+
+## 0.0.3
+
+* Fixed compatibility with OmniAuth 1.4+ (#6)
 
 ## 0.0.2
 
